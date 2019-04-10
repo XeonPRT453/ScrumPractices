@@ -1,0 +1,9 @@
+Title:Refactoring: Using Strategy design pattern to reduce complexity of code
+
+Motivation to Refactor:
+When inheriting parent class, we have to rewrite methods that are different for child class.
+By using this pattern, we can dynamically change the status of object at run time.
+The pattern also allows you to eliminate code duplication. It separates behavior from super and subclasses.
+
+
+Pattern: By using Strategy design pattern, we can improve the flexibility of object and make project more maintainable.

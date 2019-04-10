@@ -1,0 +1,8 @@
+Title:Refactoring: Using Chain of Responsibility design pattern to improve flexibility of code
+
+Motivation to Refactor:
+Encapsulate the processing elements inside a "pipeline" abstraction; and have clients "launch and leave" their requests at the entrance
+to the pipeline.
+
+
+Pattern: By using Chain of Responsibility design pattern, we can decouple sender and receiver and improve ability of maintenance.
