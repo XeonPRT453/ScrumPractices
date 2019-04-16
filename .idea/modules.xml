@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TEAM-B.iml" filepath="$PROJECT_DIR$/.idea/TEAM-B.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrumpractices/scrum-practices.iml" filepath="$PROJECT_DIR$/scrumpractices/scrum-practices.iml" />
     </modules>
   </component>
 </project>
