@@ -1,7 +1,9 @@
 package edu.cdu.xeon;
 
+import edu.cdu.xeon.sprint1.s304935.task1.after.*;
 import edu.cdu.xeon.sprint1.s304935.task2.after.Handler2;
 import edu.cdu.xeon.sprint1.s304935.task2.before.Handler;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -12,6 +14,26 @@ public class S304935TasksTests {
     {
 
         assertTrue( true );
+    }
+
+    @Test
+    public void sprint1task1Test(){
+
+        Animal sparky = new Dog();
+        Animal tweety = new Bird();
+
+        System.out.println("Dog: " + sparky.tryToFly());
+
+        System.out.println("Bird: " + tweety.tryToFly());
+        Assert.assertEquals(sparky.tryToFly(),"I can't fly");
+        Assert.assertEquals(tweety.tryToFly(),"Flying High");
+        // This allows dynamic changes for flyingType
+        // It is a default class, so cannot call this class here
+
+        //sparky.setFlyingAbility(new ItFlys());
+
+        //System.out.println("Dog: " + sparky.tryToFly());
+
     }
 
     @Test(timeout=100)
@@ -27,6 +49,7 @@ public class S304935TasksTests {
             }
 
         }
+
     }
 
     @Test(timeout=10)
@@ -43,4 +66,6 @@ public class S304935TasksTests {
 
         }
     }
+
+
 }
