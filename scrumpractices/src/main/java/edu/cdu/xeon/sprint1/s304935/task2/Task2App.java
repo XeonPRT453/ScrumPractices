@@ -22,7 +22,7 @@ public class Task2App {
             while (!nodes[j].execute(i)) {
                 j = (j + 1) % nodes.length;
             }
-            System.out.println();
+
         }
 
     }
@@ -37,7 +37,7 @@ public class Task2App {
         for (int i = 1; i < 6; i++) {
             System.out.println("Operation #" + i + ":");
             rootChain.execute(i);
-            System.out.println();
+
         }
     }
 
