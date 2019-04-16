@@ -1,4 +1,4 @@
-package edu.cdu.xeon.sprint2.s294831.task1.before;
+package edu.cdu.xeon.sprint2.s304935.task1.before;
 
 import java.util.Random;
 
