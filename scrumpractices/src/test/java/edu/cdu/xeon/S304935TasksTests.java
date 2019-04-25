@@ -3,6 +3,10 @@ package edu.cdu.xeon;
 import edu.cdu.xeon.sprint1.s304935.task1.after.*;
 import edu.cdu.xeon.sprint1.s304935.task2.after.Handler2;
 import edu.cdu.xeon.sprint1.s304935.task2.before.Handler;
+import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyAttacker;
+import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyRobot;
+import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyRobotAdapter;
+import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyTank;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -65,6 +69,38 @@ public class S304935TasksTests {
             rootChain.execute(i);
 
         }
+    }
+
+    @Test(timeout=10)
+    public void sprint2task1After(){
+
+        EnemyTank rx7Tank = new EnemyTank();
+
+        EnemyRobot fredTheRobot = new EnemyRobot();
+
+        EnemyAttacker robotAdapter = new EnemyRobotAdapter(fredTheRobot);
+
+        System.out.println("The Robot");
+
+        fredTheRobot.reactToHuman("Paul");
+        fredTheRobot.walkForward();
+        fredTheRobot.smashWithHands();
+        System.out.println();
+
+        System.out.println("The Enemy Tank");
+
+        rx7Tank.assignDriver("Frank");
+        rx7Tank.driveForward();
+        rx7Tank.fireWeapon();
+        System.out.println();
+
+        System.out.println("The Robot with Adapter");
+
+        robotAdapter.assignDriver("Mark");
+        robotAdapter.driveForward();
+        robotAdapter.fireWeapon();
+
+
     }
 
 
