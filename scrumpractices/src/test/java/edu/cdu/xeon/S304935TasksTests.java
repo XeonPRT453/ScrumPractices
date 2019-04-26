@@ -7,6 +7,7 @@ import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyAttacker;
 import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyRobot;
 import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyRobotAdapter;
 import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyTank;
+import edu.cdu.xeon.sprint2.s304935.task2.after.BankAccountFacade;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -104,4 +105,12 @@ public class S304935TasksTests {
     }
 
 
+    public void sprint2task2After(){
+
+        BankAccountFacade accessingBank = new BankAccountFacade(12345678, 1234);
+
+        accessingBank.withdrawCash(50.00);
+
+        accessingBank.withdrawCash(990.00);
+    }
 }
