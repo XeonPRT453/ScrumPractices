@@ -8,6 +8,10 @@ import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyRobot;
 import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyRobotAdapter;
 import edu.cdu.xeon.sprint2.s304935.task1.after.EnemyTank;
 import edu.cdu.xeon.sprint2.s304935.task2.after.BankAccountFacade;
+import edu.cdu.xeon.sprint3.s304935.task1.after.Mozzarella;
+import edu.cdu.xeon.sprint3.s304935.task1.after.Pizza;
+import edu.cdu.xeon.sprint3.s304935.task1.after.PlainPizza;
+import edu.cdu.xeon.sprint3.s304935.task1.after.TomatoSauce;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -104,7 +108,7 @@ public class S304935TasksTests {
 
     }
 
-
+    @Test
     public void sprint2task2After(){
 
         BankAccountFacade accessingBank = new BankAccountFacade(12345678, 1234);
@@ -113,4 +117,19 @@ public class S304935TasksTests {
 
         accessingBank.withdrawCash(990.00);
     }
+
+    @Test
+    public void sprint3task1After(){
+
+        // The PlainPizza object is sent to the Mozzarella constructor
+        // and then to the TomatoSauce constructor
+
+        Pizza basicPizza = new TomatoSauce(new Mozzarella(new PlainPizza()));
+
+        System.out.println("Ingredients: " + basicPizza.getDescription());
+
+        System.out.println("Price: " + basicPizza.getCost());
+    }
+
+
 }
