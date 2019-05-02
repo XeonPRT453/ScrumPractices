@@ -1,4 +1,17 @@
-package edu.cdu.xeon.sprint3.s299806.task1.before;
+namespace LosTechies.DaysOfRefactoring.EncapsulateConditional.Before
+{
+    public class RemoteControl
+    {
+        private string[] Functions { get; set; }
+        private string Name { get; set; }
+        private int CreatedYear { get; set; }
 
-public class App {
+        public string PerformCoolFunction(string buttonPressed)
+        {
+            // Determine if we are controlling some extra function
+            // that requires special conditions
+            if (Functions.Length > 1 && Name == "RCA" && CreatedYear > DateTime.Now.Year - 2)
+                return "doSomething";
+        }
+    }
 }
