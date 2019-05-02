@@ -1,4 +1,28 @@
-package edu.cdu.xeon.sprint2.s299806.task3.after;
+using System.Collections.Generic; 
+using System.Linq; 
 
-public class App {
+namespace LosTechies.DaysOfRefactoring.BreakResponsibilities.After 
+{ 
+    public class Video 
+    { 
+        public void RentVideo(Video video, Customer customer) 
+        { 
+            customer.Videos.Add(video); 
+        } 
+    } 
+
+    public class Customer 
+    { 
+        public IList<decimal> LateFees { get; set; } 
+        public IList<Video> Videos { get; set; } 
+
+        public void PayFee(decimal fee) 
+        { 
+        } 
+
+        public decimal CalculateBalance(Customer customer) 
+        { 
+            return customer.LateFees.Sum(); 
+        } 
+    } 
 }
