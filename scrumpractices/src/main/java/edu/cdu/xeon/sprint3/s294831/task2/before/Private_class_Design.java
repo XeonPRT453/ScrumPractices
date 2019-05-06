@@ -1,23 +1,26 @@
 package edu.cdu.xeon.sprint3.s294831.task2.before;
 
-public class App {
-  public class Circle {
-   private double radius;
-   private Color color;
-   private Point origin;
-   public Circle(double radius, Color color, Point origin) {
-     this.radius = radius;
-     this.color = color;
-     this.origin = origin;
-   }
-   public double Circumference {
-     get { return 2 * Math.PI * this.radius; }
-   }
-   public double Diameter {
-     get { return 2 * this.radius; }
-   }
-   public void Draw(Graphics graphics) {
-     //...
-   }
- }
+public class Private_class_Design {
+  
+public class Maths{
+private double division;
+private int add;
+private int sub;
+public Circle(double division, int add, int sub)
+{
+this.double= division;
+this.int = add;
+this.int= sub;
+}
+public int add {
+get { return 2+65;}
+
+public double sub {
+get { return 10-2; }
+}
+public double Calculations {
+get { return add / sub;}
+}
+
+}
 }
