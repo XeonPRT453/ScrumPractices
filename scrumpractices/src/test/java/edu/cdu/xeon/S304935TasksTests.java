@@ -12,6 +12,7 @@ import edu.cdu.xeon.sprint3.s304935.task1.after.Mozzarella;
 import edu.cdu.xeon.sprint3.s304935.task1.after.Pizza;
 import edu.cdu.xeon.sprint3.s304935.task1.after.PlainPizza;
 import edu.cdu.xeon.sprint3.s304935.task1.after.TomatoSauce;
+import edu.cdu.xeon.sprint3.s304935.task3.after.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -131,5 +132,40 @@ public class S304935TasksTests {
         System.out.println("Price: " + basicPizza.getCost());
     }
 
+    @Test
+    public void sprint3task3After(){
+
+        RemoteButton theTV = new TVRemoteMute(new TVDevice(1, 200));
+
+        RemoteButton theTV2 = new TVRemotePause(new TVDevice(1, 200));
+
+
+
+        RemoteButton theDVD = new DVDRemote(new DVDDevice(1,14));
+
+        // -----------------------
+
+        System.out.println("Test TV with Mute");
+
+        theTV.buttonFivePressed();
+        theTV.buttonSixPressed();
+        theTV.buttonNinePressed();
+
+        System.out.println("\nTest TV with Pause");
+
+        theTV2.buttonFivePressed();
+        theTV2.buttonSixPressed();
+        theTV2.buttonNinePressed();
+        theTV2.deviceFeedback();
+
+
+
+        System.out.println("\nTest DVD");
+
+        theDVD.buttonFivePressed();
+        theDVD.buttonSixPressed();
+        theDVD.buttonNinePressed();
+        theDVD.buttonNinePressed();
+    }
 
 }
