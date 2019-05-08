@@ -12,9 +12,14 @@ import edu.cdu.xeon.sprint3.s304935.task1.after.Mozzarella;
 import edu.cdu.xeon.sprint3.s304935.task1.after.Pizza;
 import edu.cdu.xeon.sprint3.s304935.task1.after.PlainPizza;
 import edu.cdu.xeon.sprint3.s304935.task1.after.TomatoSauce;
+import edu.cdu.xeon.sprint3.s304935.task2.after.EnemyShip;
+import edu.cdu.xeon.sprint3.s304935.task2.after.EnemyShipFactory;
+import edu.cdu.xeon.sprint3.s304935.task2.before.UFOEnemyShip;
 import edu.cdu.xeon.sprint3.s304935.task3.after.*;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Scanner;
 
 import static org.junit.Assert.assertTrue;
 
@@ -130,6 +135,60 @@ public class S304935TasksTests {
         System.out.println("Ingredients: " + basicPizza.getDescription());
 
         System.out.println("Price: " + basicPizza.getCost());
+    }
+
+    @Test
+    public void sprint3task2Before(){
+
+        // Old way of creating objects
+        // When we use new we are not being dynamic
+
+        UFOEnemyShip ufoShip = new UFOEnemyShip();
+
+        ufoShip.displayEnemyShip();
+
+        ufoShip.followHeroShip();
+
+        ufoShip.enemyShipShoots();
+
+
+
+
+    }
+
+    @Test
+    public void sprint3task2After(){
+
+        // Create the factory object
+        EnemyShipFactory shipFactory = new EnemyShipFactory();
+
+        // Enemy ship object
+
+        EnemyShip theEnemy = null;
+
+        Scanner userInput = new Scanner(System.in);
+
+        System.out.print("What type of ship? (U / R / B)");
+
+        if (userInput.hasNextLine()){
+
+            String typeOfShip = userInput.nextLine();
+
+            theEnemy = shipFactory.makeEnemyShip(typeOfShip);
+
+            if(theEnemy != null){
+
+                theEnemy.displayEnemyShip();
+
+                theEnemy.followHeroShip();
+
+                theEnemy.enemyShipShoots();
+
+            } else System.out.print("Please enter U, R, or B next time");
+
+        }
+
+
     }
 
     @Test
