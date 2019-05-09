@@ -1,4 +1,26 @@
-package edu.cdu.xeon.sprint3.s299806.task3.after;
+using System.Collections.Generic;
+using System.Linq;
 
-public class App {
+namespace LosTechies.DaysOfRefactoring.SampleCode.ArrowheadAntipattern.After
+{
+    public class Security
+    {
+        public ISecurityChecker SecurityChecker { get; set; }
+
+        public Security(ISecurityChecker securityChecker)
+        {
+            SecurityChecker = securityChecker;
+        }
+
+        public bool HasAccess(User user, Permission permission, IEnumerable<Permission> exemptions)
+        {
+            if (user == null || permission == null)
+                return false;
+
+            if (exemptions.Contains(permission))
+                return true;
+
+            return SecurityChecker.CheckPermission(user, permission);
+        }
+    }
 }
