@@ -1,4 +1,4 @@
-package edu.cdu.xeon.sprint4.s304935.task3.before;
+package edu.cdu.xeon.sprint5.s304935.task1.before;
 
 public class Song{
 
