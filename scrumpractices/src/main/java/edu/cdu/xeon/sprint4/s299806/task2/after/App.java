@@ -1,4 +1,27 @@
-package edu.cdu.xeon.sprint4.s299806.task2.after;
+using LosTechies.DaysOfRefactoring.PullUpField.After;
 
-public class App {
+namespace LosTechies.DaysOfRefactoring.SampleCode.RemoveMiddleMan.After
+{
+    public class Consumer
+    {
+        public AccountDataProvider AccountDataProvider { get; set; }
+
+        public Consumer(AccountDataProvider dataProvider)
+        {
+            AccountDataProvider = dataProvider;
+        }
+
+        public void Get(int id)
+        {
+            Account account = AccountDataProvider.GetAccount(id);
+        }
+    }
+
+    public class AccountDataProvider
+    {
+        public Account GetAccount(int id)
+        {
+            // get account
+        }
+    }
 }
