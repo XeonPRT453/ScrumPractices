@@ -17,6 +17,7 @@ import edu.cdu.xeon.sprint3.s304935.task2.after.EnemyShipFactory;
 import edu.cdu.xeon.sprint3.s304935.task2.before.UFOEnemyShip;
 import edu.cdu.xeon.sprint3.s304935.task3.after.*;
 import edu.cdu.xeon.sprint4.s304935.task1.after.*;
+import edu.cdu.xeon.sprint4.s304935.task2.after.MementoApp;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -321,6 +322,13 @@ public class S304935TasksTests {
 
         turnThemOff.pressUndo();
 
+    }
+
+    @Test
+    public void sprint4task2After(){
+
+        MementoApp mementoApp = new MementoApp();
+        mementoApp.StartMementoApp();
     }
 
 }
