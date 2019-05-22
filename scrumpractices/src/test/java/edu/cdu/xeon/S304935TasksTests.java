@@ -18,6 +18,10 @@ import edu.cdu.xeon.sprint3.s304935.task2.before.UFOEnemyShip;
 import edu.cdu.xeon.sprint3.s304935.task3.after.*;
 import edu.cdu.xeon.sprint4.s304935.task1.after.*;
 import edu.cdu.xeon.sprint4.s304935.task2.after.MementoApp;
+import edu.cdu.xeon.sprint5.s304935.task1.after.DiscJockey;
+import edu.cdu.xeon.sprint5.s304935.task1.after.SongsOfThe70s;
+import edu.cdu.xeon.sprint5.s304935.task1.after.SongsOfThe80s;
+import edu.cdu.xeon.sprint5.s304935.task1.after.SongsOfThe90s;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -330,5 +334,20 @@ public class S304935TasksTests {
         MementoApp mementoApp = new MementoApp();
         mementoApp.StartMementoApp();
     }
+
+    @Test
+    public void sprint5task1After(){
+
+        SongsOfThe70s songs70s = new SongsOfThe70s();
+        SongsOfThe80s songs80s = new SongsOfThe80s();
+        SongsOfThe90s songs90s = new SongsOfThe90s();
+
+        DiscJockey madMike = new DiscJockey(songs70s, songs80s, songs90s);
+
+
+        madMike.showTheSongs2();
+    }
+
+
 
 }
